@@ -17,7 +17,7 @@ const MyAccount = lazy(() => import('./pages/other/MyAccount'))
 const Register = lazy(() => import('./pages/other/Register'))
 const Login = lazy(() => import('./pages/other/Login'))
 const ForgetPassword = lazy(() => import('./pages/other/ForgetPassword'))
-const Transactions = lazy(() => import('./pages/other/Transactions'))
+// const Transactions = lazy(() => import('./pages/other/Transactions'))
 const ScratchCards = lazy(() => import('./pages/other/ScratchCards'))
 
 const Cart = lazy(() => import('./pages/other/Cart'))
@@ -88,10 +88,10 @@ const App = (props) => {
                   path={process.env.PUBLIC_URL + '/forget-password'}
                   component={ForgetPassword}
                 />
-                <Route
+                {/* <Route
                   path={process.env.PUBLIC_URL + '/transactions'}
                   component={Transactions}
-                />
+                /> */}
                 <Route
                   path={process.env.PUBLIC_URL + '/scratchcards'}
                   component={ScratchCards}

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Fragment, useState, useEffect, lazy } from 'react'
-import MetaTags from 'react-meta-tags'
+import { Helmet } from 'react-helmet'
 import Paginator from 'react-hooks-paginator'
 import { BreadcrumbsItem } from 'react-breadcrumbs-dynamic'
 import { connect } from 'react-redux'
@@ -8,7 +8,7 @@ import { getSortedProducts } from '../../helpers/product'
 import LayoutOne from '../../layouts/LayoutOne'
 import Breadcrumb from '../../wrappers/breadcrumb/Breadcrumb'
 import ShopSidebar from '../../wrappers/product/ShopSidebar'
-import ShopTopbar from '../../wrappers/product/ShopTopbar'
+import SratchCardTopbar from '../../wrappers/product/SratchCardTopbar'
 import ShopProducts from '../../wrappers/product/ShopProducts'
 import HeroSliderOne from '../../wrappers/hero-slider/HeroSliderOne'
 import ShopSearch from '../../components/product/ShopSearch'
@@ -55,38 +55,33 @@ const ScratchCards = ({ location, products }) => {
 
   return (
     <Fragment>
-      <MetaTags>
-        <title>Flone | Shop Page</title>
+      <Helmet>
+        <title>DigiStore | Shop Page</title>
         <meta
           name='description'
           content='Shop page of flone react minimalist eCommerce template.'
         />
-      </MetaTags>
+      </Helmet>
 
-      {/* <BreadcrumbsItem to={process.env.PUBLIC_URL + '/'}>Home</BreadcrumbsItem>
+      <BreadcrumbsItem to={process.env.PUBLIC_URL + '/'}>Home</BreadcrumbsItem>
       <BreadcrumbsItem to={process.env.PUBLIC_URL + pathname}>
         Shop
-      </BreadcrumbsItem> */}
+      </BreadcrumbsItem>
 
       <LayoutOne headerTop='visible'>
         {/* breadcrumb */}
-        {/* <Breadcrumb /> */}
-        {/* hero slider */}
-        <HeroSliderOne />
+        <Breadcrumb />
 
         <div className='shop-area pt-95 pb-100'>
           <div className='container'>
             <div className='row'>
               <div className='col-lg-12'>
-                {/* shop search */}
-                <ShopSearch />
-
                 {/* shop topbar default */}
-                <ShopTopbar
+                <SratchCardTopbar
                   getLayout={getLayout}
                   getFilterSortParams={getFilterSortParams}
-                  productCount={products.length}
-                  sortedProductCount={currentData.length}
+                  cardCount={products.length}
+                  sortedCardCount={currentData.length}
                 />
 
                 {/* shop page content default */}

@@ -56,23 +56,23 @@ const Home = ({ location, products }) => {
   return (
     <Fragment>
       <MetaTags>
-        <title>Flone | Shop Page</title>
+        <title>DigiStore | Products Page</title>
         <meta
           name='description'
           content='Shop page of flone react minimalist eCommerce template.'
         />
       </MetaTags>
 
-      {/* <BreadcrumbsItem to={process.env.PUBLIC_URL + '/'}>Home</BreadcrumbsItem>
+      <BreadcrumbsItem to={process.env.PUBLIC_URL + '/'}>Home</BreadcrumbsItem>
       <BreadcrumbsItem to={process.env.PUBLIC_URL + pathname}>
-        Shop
-      </BreadcrumbsItem> */}
+        Products
+      </BreadcrumbsItem>
 
       <LayoutOne headerTop='visible'>
         {/* breadcrumb */}
-        {/* <Breadcrumb /> */}
+        <Breadcrumb />
         {/* hero slider */}
-        <HeroSliderOne />
+        {/* <HeroSliderOne /> */}
 
         <div className='shop-area pt-95 pb-100'>
           <div className='container'>
