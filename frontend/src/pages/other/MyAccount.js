@@ -64,8 +64,12 @@ const MyAccount = ({ location }) => {
                               <div className='col-lg-12 col-md-12'>
                                 <div className='billing-info'>
                                   <label>Mobile Number</label>
-                                  <input type='tel' />
-                                  <button type='submit'>Continue</button>
+                                  <input
+                                    className='form-control'
+                                    type='text'
+                                    placeholder='Readonly input here…'
+                                    disabled
+                                  />
                                 </div>
                               </div>
 
