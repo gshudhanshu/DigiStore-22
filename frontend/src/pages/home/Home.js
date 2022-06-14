@@ -80,8 +80,7 @@ const Home = ({ location, products }) => {
               <div className='col-lg-12'>
                 {/* shop search */}
                 <ShopSearch />
-              </div>
-              <div className='col-lg-9 order-1 order-lg-2'>
+
                 {/* shop topbar default */}
                 <ShopTopbar
                   getLayout={getLayout}
