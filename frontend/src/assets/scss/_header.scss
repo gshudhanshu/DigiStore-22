@@ -90,8 +90,22 @@
     padding: 20px 0 15px;
   }
 }
+
+.row {
+  align-items: center;
+}
+
+.logo > a > img {
+  width: 100%;
+  max-width: 170px;
+  min-width: 140px;
+}
+
 .logo {
-  margin-top: 32px;
+  // margin-top: 32px;
+  display: flex;
+  align-items: center;
+  height: 100%;
   @media #{$md-layout} {
     margin-top: 0;
   }
@@ -99,7 +113,7 @@
     margin-top: 0;
   }
   &.logo-hm5 {
-    margin-top: 41px;
+    // margin-top: 41px;
     a.sticky-block {
       display: none;
       @media #{$md-layout,
@@ -200,7 +214,7 @@
                 width: 7px;
                 height: 7px;
 
-                content: "";
+                content: '';
                 transition: all 0.3s ease-in-out 0s;
 
                 opacity: 0;
@@ -297,7 +311,7 @@
                     width: 7px;
                     height: 7px;
 
-                    content: "";
+                    content: '';
                     transition: all 0.3s ease-in-out 0s;
 
                     opacity: 0;
@@ -436,15 +450,11 @@
   }
 }
 
-
-
-
-
 .header-right-wrap {
   display: flex;
   justify-content: flex-end;
 
-  margin-top: 32px;
+  // margin-top: 32px;
   @media #{$md-layout} {
     margin-top: 0;
   }
@@ -939,7 +949,6 @@
   }
 }
 
-
 /* header 3 */
 
 .header-padding-2 .container-fluid {
@@ -1020,7 +1029,7 @@
       width: 1px;
       height: 15px;
 
-      content: "";
+      content: '';
       transform: translateY(-50%);
 
       background-color: #d5d4d4;
@@ -1269,8 +1278,6 @@
   }
 }
 
-
-
 .sidebar-menu {
   padding: 0 0 0 108px;
   @media #{$xx-layout} {
@@ -1359,7 +1366,7 @@
                 width: 7px;
                 height: 7px;
 
-                content: "";
+                content: '';
                 transition: all 0.3s ease-in-out 0s;
 
                 opacity: 0;
@@ -1467,7 +1474,7 @@
                     width: 7px;
                     height: 7px;
 
-                    content: "";
+                    content: '';
                     transition: all 0.3s ease-in-out 0s;
 
                     opacity: 0;
@@ -1536,7 +1543,6 @@
   }
 }
 
-
 .header-hm4-none {
   display: none;
   @media #{$xs-layout} {
@@ -1546,7 +1552,6 @@
     display: block;
   }
 }
-
 
 /* home 5 */
 
@@ -1585,8 +1590,6 @@
     padding: 0 15px;
   }
 }
-
-
 
 /* home 7 */
 
@@ -1708,7 +1711,7 @@
           width: 10px;
           height: 1px;
 
-          content: "";
+          content: '';
           transform: translateY(-50%);
 
           background: #999;
@@ -1768,8 +1771,6 @@
     }
   }
 }
-
-
 
 .header-hm-7.stick {
   .clickable-menu {
@@ -1847,7 +1848,6 @@
   }
 }
 
-
 /* home 8 */
 
 .header-hm8 {
@@ -1920,10 +1920,10 @@
   }
   .logo {
     @media #{$md-layout} {
-      text-align: left!important;
+      text-align: left !important;
     }
     @media #{$xs-layout} {
-      text-align: left!important;
+      text-align: left !important;
     }
   }
 }
@@ -1944,8 +1944,6 @@
 }
 
 /* home 9 */
-
-
 
 .header-hm9 {
   .main-menu {
@@ -2010,7 +2008,6 @@
   }
 }
 
-
 /* header hm10 */
 
 @media #{$sm-layout} {
@@ -2032,7 +2029,6 @@
   }
 }
 
-
 @media #{$xs-layout} {
   .header-hm9 {
     .header-right-wrap {
@@ -2047,13 +2043,9 @@
   }
 }
 
-
 .mobile-aside-button {
   padding: 0;
 }
-
-
-
 
 /* offcanvas mobile menu */
 
@@ -2124,7 +2116,6 @@
   transition: 0.6s;
   transform: translateX(100%);
 
-
   &.active {
     transform: translateX(0);
   }
@@ -2152,7 +2143,6 @@
   color: #fff;
   border: none;
   background: #343538;
-
 
   // @media #{$sm-layout}{
   //     width: 50px;
@@ -2328,7 +2318,6 @@
         text-transform: uppercase;
       }
 
-
       &.menu-item-has-children {
         position: relative;
 
@@ -2380,7 +2369,7 @@
 
               width: 100%;
 
-              content: "";
+              content: '';
               transform: rotate(90deg);
 
               border-bottom: 1px solid;
@@ -2447,7 +2436,6 @@
   }
 }
 
-
 .transparent-bar {
   position: absolute;
   z-index: 999;
@@ -2467,7 +2455,6 @@
   }
 }
 
-
 .mobile-menu-middle {
   margin-bottom: 50px;
   .lang-curr-style {
@@ -2479,7 +2466,6 @@
       border: none;
       background: none;
     }
-
 
     .title {
       font-weight: 500;
