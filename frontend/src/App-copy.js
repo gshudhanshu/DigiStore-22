@@ -7,9 +7,8 @@ import { multilanguage, loadLanguages } from 'redux-multilanguage'
 import { connect } from 'react-redux'
 import { BreadcrumbsProvider } from 'react-breadcrumbs-dynamic'
 
-// home pages
 const Home = lazy(() => import('./pages/home/Home'))
-
+// home pages
 const HomeFashion = lazy(() => import('./pages/home/HomeFashion'))
 const HomeFashionTwo = lazy(() => import('./pages/home/HomeFashionTwo'))
 const HomeFashionThree = lazy(() => import('./pages/home/HomeFashionThree'))
