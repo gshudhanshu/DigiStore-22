@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { Fragment, useState, useEffect } from 'react'
+import React, { Fragment, useState, useEffect, lazy } from 'react'
 import MetaTags from 'react-meta-tags'
 import Paginator from 'react-hooks-paginator'
 import { BreadcrumbsItem } from 'react-breadcrumbs-dynamic'
@@ -10,8 +10,10 @@ import Breadcrumb from '../../wrappers/breadcrumb/Breadcrumb'
 import ShopSidebar from '../../wrappers/product/ShopSidebar'
 import ShopTopbar from '../../wrappers/product/ShopTopbar'
 import ShopProducts from '../../wrappers/product/ShopProducts'
+import HeroSliderOne from '../../wrappers/hero-slider/HeroSliderOne'
+import ShopSearch from '../../components/product/ShopSearch'
 
-const ShopGridStandard = ({ location, products }) => {
+const Home = ({ location, products }) => {
   const [layout, setLayout] = useState('grid three-column')
   const [sortType, setSortType] = useState('')
   const [sortValue, setSortValue] = useState('')
@@ -68,20 +70,16 @@ const ShopGridStandard = ({ location, products }) => {
 
       <LayoutOne headerTop='visible'>
         {/* breadcrumb */}
-        <Breadcrumb />
+        {/* <Breadcrumb /> */}
         {/* hero slider */}
         <HeroSliderOne />
 
         <div className='shop-area pt-95 pb-100'>
           <div className='container'>
             <div className='row'>
-              <div className='col-lg-3 order-2 order-lg-1'>
-                {/* shop sidebar */}
-                <ShopSidebar
-                  products={products}
-                  getSortParams={getSortParams}
-                  sideSpaceClass='mr-30'
-                />
+              <div className='col-lg-12'>
+                {/* shop search */}
+                <ShopSearch />
               </div>
               <div className='col-lg-9 order-1 order-lg-2'>
                 {/* shop topbar default */}
@@ -118,7 +116,7 @@ const ShopGridStandard = ({ location, products }) => {
   )
 }
 
-ShopGridStandard.propTypes = {
+Home.propTypes = {
   location: PropTypes.object,
   products: PropTypes.array,
 }
@@ -129,4 +127,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(ShopGridStandard)
+export default connect(mapStateToProps)(Home)
