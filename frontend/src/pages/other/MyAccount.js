@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Fragment } from 'react'
-import Helmet from 'helmet'
+import MetaTags from 'react-meta-tags'
 import { BreadcrumbsItem } from 'react-breadcrumbs-dynamic'
 import Card from 'react-bootstrap/Card'
 import Accordion from 'react-bootstrap/Accordion'
@@ -13,13 +13,13 @@ const MyAccount = ({ location }) => {
 
   return (
     <Fragment>
-      <Helmet>
-        <title>DigiStore | My Account</title>
+      <MetaTags>
+        <title>Flone | My Account</title>
         <meta
           name='description'
           content='Compare page of flone react minimalist eCommerce template.'
         />
-      </Helmet>
+      </MetaTags>
       <BreadcrumbsItem to={process.env.PUBLIC_URL + '/'}>Home</BreadcrumbsItem>
       <BreadcrumbsItem to={process.env.PUBLIC_URL + pathname}>
         My Account

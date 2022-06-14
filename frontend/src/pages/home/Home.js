@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Fragment, useState, useEffect, lazy } from 'react'
-import Helmet from 'helmet'
+import MetaTags from 'react-meta-tags'
 import Paginator from 'react-hooks-paginator'
 import { BreadcrumbsItem } from 'react-breadcrumbs-dynamic'
 import { connect } from 'react-redux'
@@ -55,13 +55,13 @@ const Home = ({ location, products }) => {
 
   return (
     <Fragment>
-      <Helmet>
+      <MetaTags>
         <title>Flone | Shop Page</title>
         <meta
           name='description'
           content='Shop page of flone react minimalist eCommerce template.'
         />
-      </Helmet>
+      </MetaTags>
 
       <BreadcrumbsItem to={process.env.PUBLIC_URL + '/'}>Home</BreadcrumbsItem>
       <BreadcrumbsItem to={process.env.PUBLIC_URL + pathname}>

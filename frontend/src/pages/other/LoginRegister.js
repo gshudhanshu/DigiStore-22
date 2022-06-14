@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Fragment } from 'react'
-import { Helmet } from 'react-helmet'
+import MetaTags from 'react-meta-tags'
 import { Link } from 'react-router-dom'
 import { BreadcrumbsItem } from 'react-breadcrumbs-dynamic'
 import Tab from 'react-bootstrap/Tab'
@@ -16,13 +16,13 @@ const LoginRegister = ({ location }) => {
 
   return (
     <Fragment>
-      <Helmet>
-        <title>DigiStore | Login</title>
+      <MetaTags>
+        <title>Flone | Login</title>
         <meta
           name='description'
           content='Compare page of flone react minimalist eCommerce template.'
         />
-      </Helmet>
+      </MetaTags>
       <BreadcrumbsItem to={process.env.PUBLIC_URL + '/'}>Home</BreadcrumbsItem>
       <BreadcrumbsItem to={process.env.PUBLIC_URL + pathname}>
         Login Register
@@ -53,23 +53,14 @@ const LoginRegister = ({ location }) => {
                         <div className='login-form-container'>
                           <div className='login-register-form'>
                             <form>
-                              <label>Mobile number</label>
-                              <PhoneInput
-                                country={'bb'}
-                                onlyCountries={['bb', 'in']}
-                                placeholder='+1246 530 3444'
+                              <input
+                                type='tel'
                                 name='mobile-number'
-                                // id='mobile-number-field'
-                                // value={this.state.phone}
-                                // onChange={(phone) => this.setState({ phone })}
+                                placeholder='Mobile Number'
                               />
-                              <label htmlFor='user-password-field'>
-                                Password
-                              </label>
                               <input
                                 type='password'
                                 name='user-password'
-                                id='user-password-field'
                                 placeholder='Password'
                               />
                               <div className='button-box'>
@@ -92,59 +83,24 @@ const LoginRegister = ({ location }) => {
                         <div className='login-form-container'>
                           <div className='login-register-form'>
                             <form>
-                              <label htmlFor='first-name-field'>
-                                First name
-                              </label>
                               <input
                                 type='text'
                                 name='first-name'
                                 placeholder='First Name'
-                                id='first-name-field'
                               />
-                              <label htmlFor='last-name-field'>Last name</label>
                               <input
                                 type='text'
                                 name='last-name'
-                                id='last-name-field'
                                 placeholder='Last Name'
                               />
-                              <label>Mobile number</label>
                               <PhoneInput
-                                country={'bb'}
-                                onlyCountries={['bb', 'in']}
-                                placeholder='+1246 530 3444'
-                                name='mobile-number'
-                                id='mobile-number-field'
-                                // value={this.state.phone}
-                                // onChange={(phone) => this.setState({ phone })}
+                                country={'us'}
+                                value={this.state.phone}
+                                onChange={(phone) => this.setState({ phone })}
                               />
-
-                              <div className='button-box mb-4'>
-                                <button type='submit'>
-                                  <span>Send SMS Code</span>
-                                </button>
-                                <span className='ml-3'>
-                                  Resend after 60 sec
-                                </span>
-                              </div>
-
-                              <label htmlFor='mobile-otp-field'>
-                                Received SMS Code
-                              </label>
-                              <input
-                                type='number'
-                                name='mobile-otp'
-                                id='mobile-otp-field'
-                                placeholder='123456'
-                              />
-
-                              <label htmlFor='register-password-field'>
-                                Password
-                              </label>
                               <input
                                 type='password'
-                                name='register-password'
-                                id='register-password-field'
+                                name='user-password'
                                 placeholder='Password'
                               />
 
