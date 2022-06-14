@@ -18,9 +18,12 @@ const TabProduct = ({
       } ${bgColorClass ? bgColorClass : ''}`}
     >
       <div className='container'>
-        <SectionTitle titleText='DAILY DEALS!' positionClass='text-center' />
+        <SectionTitle
+          titleText='Popular Products'
+          positionClass='text-center'
+        />
         <Tab.Container defaultActiveKey='bestSeller'>
-          <Nav
+          {/* <Nav
             variant='pills'
             className='product-tab-list pt-30 pb-55 text-center'
           >
@@ -39,7 +42,7 @@ const TabProduct = ({
                 <h4>Sale Items</h4>
               </Nav.Link>
             </Nav.Item>
-          </Nav>
+          </Nav> */}
           <Tab.Content>
             <Tab.Pane eventKey='newArrival'>
               <div className='row'>
