@@ -11,7 +11,7 @@ import Breadcrumb from '../../wrappers/breadcrumb/Breadcrumb'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 
-const LoginRegister = ({ location }) => {
+const Login = ({ location }) => {
   const { pathname } = location
 
   return (
@@ -94,8 +94,8 @@ const LoginRegister = ({ location }) => {
   )
 }
 
-LoginRegister.propTypes = {
+Login.propTypes = {
   location: PropTypes.object,
 }
 
-export default LoginRegister
+export default Login

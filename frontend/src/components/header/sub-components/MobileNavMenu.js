@@ -11,12 +11,23 @@ const MobileNavMenu = ({ strings }) => {
           <Link to={process.env.PUBLIC_URL + '/'}>Products</Link>
         </li>
         <li>
+          <Link to={process.env.PUBLIC_URL + '/scratchcards'}>
+            Scratch Cards
+          </Link>
+        </li>
+        <li>
           <Link to={process.env.PUBLIC_URL + '/transactions'}>
             Transactions
           </Link>
         </li>
         <li>
-          <Link to={process.env.PUBLIC_URL + '/contact'}>Contact Us</Link>
+          {/* <Link to={process.env.PUBLIC_URL + '/contact'}>Contact Us</Link> */}
+          <a
+            href={'https://www.digicelgroup.com/bb/en/contact-us.html'}
+            target='_blank'
+          >
+            Contact Us
+          </a>
         </li>
       </ul>
     </nav>
