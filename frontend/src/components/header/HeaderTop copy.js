@@ -26,14 +26,10 @@ const HeaderTop = ({
       />
       <div className='header-offer'>
         <p>
-          Email:{' '}
-          <a href='mailto:BDS_CustomerCare_External@digicelgroup.com'>
-            BDS_CustomerCare_External@digicelgroup.com
-          </a>
-          {''}
-          {/* <span>
+          Free delivery on order over{' '}
+          <span>
             {currency.currencySymbol + (200 * currency.currencyRate).toFixed(2)}
-          </span> */}
+          </span>
         </p>
       </div>
     </div>

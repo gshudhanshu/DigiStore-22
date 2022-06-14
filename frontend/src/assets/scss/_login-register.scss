@@ -29,7 +29,7 @@
       &:before {
         background-color: #454545;
         bottom: 5px;
-        content: "";
+        content: '';
         height: 18px;
         margin: 0 auto;
         position: absolute;
@@ -66,8 +66,12 @@
           height: 45px;
           margin-bottom: 30px;
           padding: 0 15px;
+          @media #{$xs-layout} {
+            margin-bottom: 20px;
+          }
         }
-        input[type="checkbox"] {
+
+        input[type='checkbox'] {
           height: 15px;
           margin: 0;
           position: relative;
@@ -90,6 +94,8 @@
               float: right;
               font-size: 15px;
               @media #{$xs-layout} {
+                width: 100%;
+                margin-bottom: 20px;
                 font-size: 14px;
               }
               transition: all 0.3s ease 0s;
@@ -109,12 +115,31 @@
             padding: 11px 30px;
             text-transform: uppercase;
             transition: all 0.3s ease 0s;
+            a {
+              transition: all 0.9s ease 0s;
+            }
             &:hover {
               background-color: $theme-color;
               color: #fff;
+              a {
+                color: #fff;
+              }
             }
           }
         }
+      }
+
+      .react-tel-input {
+        input {
+          padding-left: 48px;
+          margin-bottom: 30px !important;
+        }
+        input:focus {
+          box-shadow: unset;
+        }
+      }
+      .react-tel-input .form-control {
+        width: 100%;
       }
     }
   }
