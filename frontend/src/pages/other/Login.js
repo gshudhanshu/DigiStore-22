@@ -11,13 +11,13 @@ import Breadcrumb from '../../wrappers/breadcrumb/Breadcrumb'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 
-const ForgetPassword = ({ location }) => {
+const LoginRegister = ({ location }) => {
   const { pathname } = location
 
   return (
     <Fragment>
       <Helmet>
-        <title>DigiStore | Forget Password</title>
+        <title>DigiStore | Login</title>
         <meta
           name='description'
           content='Compare page of flone react minimalist eCommerce template.'
@@ -25,7 +25,7 @@ const ForgetPassword = ({ location }) => {
       </Helmet>
       <BreadcrumbsItem to={process.env.PUBLIC_URL + '/'}>Home</BreadcrumbsItem>
       <BreadcrumbsItem to={process.env.PUBLIC_URL + pathname}>
-        Forget Password
+        Login
       </BreadcrumbsItem>
       <LayoutOne headerTop='visible'>
         {/* breadcrumb */}
@@ -37,8 +37,8 @@ const ForgetPassword = ({ location }) => {
                 <div className='login-register-wrapper'>
                   <Nav variant='pills' className='login-register-tab-list'>
                     <Nav.Item>
-                      <Nav.Link eventKey='forget'>
-                        <h4>Forget Password</h4>
+                      <Nav.Link eventKey='login'>
+                        <h4>Login</h4>
                       </Nav.Link>
                     </Nav.Item>
                   </Nav>
@@ -66,12 +66,19 @@ const ForgetPassword = ({ location }) => {
                           <div className='login-toggle-btn'>
                             <input type='checkbox' />
                             <label className='ml-10'>Remember me</label>
-                            <Link to={process.env.PUBLIC_URL + '/login'}>
-                              Already have an account?
+                            <Link
+                              to={process.env.PUBLIC_URL + '/forget-password'}
+                            >
+                              Forgot Password?
                             </Link>
                           </div>
                           <button type='submit'>
                             <span>Login</span>
+                          </button>
+                          <button type='submit' className='ml-3'>
+                            <Link to={process.env.PUBLIC_URL + '/register'}>
+                              Register
+                            </Link>
                           </button>
                         </div>
                       </form>
@@ -87,8 +94,8 @@ const ForgetPassword = ({ location }) => {
   )
 }
 
-ForgetPassword.propTypes = {
+LoginRegister.propTypes = {
   location: PropTypes.object,
 }
 
-export default ForgetPassword
+export default LoginRegister

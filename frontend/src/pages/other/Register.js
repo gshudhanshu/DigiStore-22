@@ -11,13 +11,13 @@ import Breadcrumb from '../../wrappers/breadcrumb/Breadcrumb'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 
-const ForgetPassword = ({ location }) => {
+const Register = ({ location }) => {
   const { pathname } = location
 
   return (
     <Fragment>
       <Helmet>
-        <title>DigiStore | Forget Password</title>
+        <title>DigiStore | Register</title>
         <meta
           name='description'
           content='Compare page of flone react minimalist eCommerce template.'
@@ -25,7 +25,7 @@ const ForgetPassword = ({ location }) => {
       </Helmet>
       <BreadcrumbsItem to={process.env.PUBLIC_URL + '/'}>Home</BreadcrumbsItem>
       <BreadcrumbsItem to={process.env.PUBLIC_URL + pathname}>
-        Forget Password
+        Register
       </BreadcrumbsItem>
       <LayoutOne headerTop='visible'>
         {/* breadcrumb */}
@@ -37,41 +37,74 @@ const ForgetPassword = ({ location }) => {
                 <div className='login-register-wrapper'>
                   <Nav variant='pills' className='login-register-tab-list'>
                     <Nav.Item>
-                      <Nav.Link eventKey='forget'>
-                        <h4>Forget Password</h4>
+                      <Nav.Link eventKey='register'>
+                        <h4>Create Account</h4>
                       </Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <div className='login-form-container'>
                     <div className='login-register-form'>
                       <form>
+                        <label htmlFor='first-name-field'>First name</label>
+                        <input
+                          type='text'
+                          name='first-name'
+                          placeholder='First Name'
+                          id='first-name-field'
+                        />
+                        <label htmlFor='last-name-field'>Last name</label>
+                        <input
+                          type='text'
+                          name='last-name'
+                          id='last-name-field'
+                          placeholder='Last Name'
+                        />
                         <label>Mobile number</label>
                         <PhoneInput
                           country={'bb'}
                           onlyCountries={['bb', 'in']}
                           placeholder='+1246 530 3444'
                           name='mobile-number'
-                          // id='mobile-number-field'
+                          id='mobile-number-field'
                           // value={this.state.phone}
                           // onChange={(phone) => this.setState({ phone })}
                         />
-                        <label htmlFor='user-password-field'>Password</label>
+
+                        <div className='button-box mb-4'>
+                          <button type='submit'>
+                            <span>Send SMS Code</span>
+                          </button>
+                          <span className='ml-3'>Resend after 60 sec</span>
+                        </div>
+
+                        <label htmlFor='mobile-otp-field'>
+                          Received SMS Code
+                        </label>
+                        <input
+                          type='number'
+                          name='mobile-otp'
+                          id='mobile-otp-field'
+                          placeholder='123456'
+                        />
+
+                        <label htmlFor='register-password-field'>
+                          Password
+                        </label>
                         <input
                           type='password'
-                          name='user-password'
-                          id='user-password-field'
+                          name='register-password'
+                          id='register-password-field'
                           placeholder='Password'
                         />
+
                         <div className='button-box'>
-                          <div className='login-toggle-btn'>
-                            <input type='checkbox' />
-                            <label className='ml-10'>Remember me</label>
-                            <Link to={process.env.PUBLIC_URL + '/login'}>
-                              Already have an account?
-                            </Link>
-                          </div>
                           <button type='submit'>
-                            <span>Login</span>
+                            <span>Register</span>
+                          </button>
+                          <button type='submit' className='ml-3'>
+                            <Link to={process.env.PUBLIC_URL + '/login'}>
+                              Login
+                            </Link>
                           </button>
                         </div>
                       </form>
@@ -87,8 +120,8 @@ const ForgetPassword = ({ location }) => {
   )
 }
 
-ForgetPassword.propTypes = {
+Register.propTypes = {
   location: PropTypes.object,
 }
 
-export default ForgetPassword
+export default Register

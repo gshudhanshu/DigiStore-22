@@ -66,6 +66,9 @@
           height: 45px;
           margin-bottom: 30px;
           padding: 0 15px;
+          @media #{$xs-layout} {
+            margin-bottom: 20px;
+          }
         }
 
         input[type='checkbox'] {
@@ -91,6 +94,8 @@
               float: right;
               font-size: 15px;
               @media #{$xs-layout} {
+                width: 100%;
+                margin-bottom: 20px;
                 font-size: 14px;
               }
               transition: all 0.3s ease 0s;

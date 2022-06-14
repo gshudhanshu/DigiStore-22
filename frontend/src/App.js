@@ -14,7 +14,9 @@ const Home = lazy(() => import('./pages/home/Home'))
 const About = lazy(() => import('./pages/other/About'))
 const Contact = lazy(() => import('./pages/other/Contact'))
 const MyAccount = lazy(() => import('./pages/other/MyAccount'))
-const LoginRegister = lazy(() => import('./pages/other/LoginRegister'))
+const Register = lazy(() => import('./pages/other/Register'))
+const Login = lazy(() => import('./pages/other/Login'))
+const ForgetPassword = lazy(() => import('./pages/other/ForgetPassword'))
 
 const Cart = lazy(() => import('./pages/other/Cart'))
 const Wishlist = lazy(() => import('./pages/other/Wishlist'))
@@ -73,8 +75,16 @@ const App = (props) => {
                   component={MyAccount}
                 />
                 <Route
-                  path={process.env.PUBLIC_URL + '/login-register'}
-                  component={LoginRegister}
+                  path={process.env.PUBLIC_URL + '/login'}
+                  component={Login}
+                />
+                <Route
+                  path={process.env.PUBLIC_URL + '/register'}
+                  component={Register}
+                />
+                <Route
+                  path={process.env.PUBLIC_URL + '/forget-password'}
+                  component={ForgetPassword}
                 />
 
                 <Route
