@@ -29,7 +29,7 @@
       &:before {
         background-color: #454545;
         bottom: 5px;
-        content: "";
+        content: '';
         height: 18px;
         margin: 0 auto;
         position: absolute;
@@ -67,7 +67,8 @@
           margin-bottom: 30px;
           padding: 0 15px;
         }
-        input[type="checkbox"] {
+
+        input[type='checkbox'] {
           height: 15px;
           margin: 0;
           position: relative;
@@ -115,6 +116,19 @@
             }
           }
         }
+      }
+
+      .react-tel-input {
+        input {
+          padding-left: 48px;
+          margin-bottom: 30px !important;
+        }
+        input:focus {
+          box-shadow: unset;
+        }
+      }
+      .react-tel-input .form-control {
+        width: 100%;
       }
     }
   }
