@@ -6,7 +6,6 @@ import Card from 'react-bootstrap/Card'
 import Accordion from 'react-bootstrap/Accordion'
 import LayoutOne from '../../layouts/LayoutOne'
 import Breadcrumb from '../../wrappers/breadcrumb/Breadcrumb'
-import Nav from 'react-bootstrap/Nav'
 
 const MyAccount = ({ location }) => {
   const { pathname } = location
@@ -27,18 +26,7 @@ const MyAccount = ({ location }) => {
       <LayoutOne headerTop='visible'>
         {/* breadcrumb */}
         <Breadcrumb />
-
         <div className='myaccount-area pb-80 pt-100'>
-          <div className='login-register-wrapper'>
-            <Nav variant='pills' className='login-register-tab-list '>
-              <Nav.Item>
-                <Nav.Link eventKey='forget'>
-                  <h4>Forget Password</h4>
-                </Nav.Link>
-              </Nav.Item>
-            </Nav>
-          </div>
-
           <div className='container'>
             <div className='row'>
               <div className='ml-auto mr-auto col-lg-9'>
